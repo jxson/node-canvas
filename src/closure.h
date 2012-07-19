@@ -44,7 +44,6 @@ void
 closure_destroy(closure_t *closure) {
   if (closure->len) {
     free(closure->data);
-    V8::AdjustAmountOfExternalAllocatedMemory(-closure->max_len);
   }
 }
 
